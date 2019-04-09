@@ -763,6 +763,10 @@ ul.list {
       @media (max-width: 576px) {
         .breadcrumbs__block ul li:before {
           top: 58%; } }
+  @media (max-width: 576px) and (pointer: coarse) {
+    .breadcrumbs__block ul li:before {
+      top: 50%; } }
+
     .breadcrumbs__block ul li a {
       color: #06315b; }
       .breadcrumbs__block ul li a:hover {
