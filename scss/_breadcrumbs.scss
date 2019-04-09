@@ -13,29 +13,29 @@
 			li{
 				margin: .5rem 2.5rem .5rem 0;
 				position: relative;
-				padding-left: 2.5rem;
+				padding-right: 2.5rem;
+				font: 1.8rem/1.4 $HR;
 				&:before{
 					content: '\e906';
 					position: absolute;
-					font: 2.5rem 'icomoon';
+					font: 2.5rem/1 'icomoon';
 					color: #cd0027;
-					left: -1.5rem;
-					top: -0.2rem;
+					right: -1.5rem;
+					top: 48%;
+					@include transform(translateY(-50%));
+					@include br3{
+						top: 58%;
+					}
 				}
 				a{
-					font: 1.8rem $HR;
 					color: #06315b;
 					&:hover{
 						text-decoration: underline;
 					}
 				}
 				&:last-child{
-					a{
-						color: $main-color3;
-					}
-				}
-				&:first-child{
-					padding-left: 0;
+					padding-right: 0;
+						color: $main-color3;	
 					&:before{
 						content: '';
 					}
