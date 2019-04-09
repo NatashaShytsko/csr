@@ -1,0 +1,23 @@
+.footer{
+	padding: 7rem 0;
+	&__copyright{
+		@extend .text;
+		color: #8398ad;
+		margin-bottom: 1rem;
+	}
+	&__social{
+		li{
+			margin: 1rem 0;
+			padding: 0 2rem;
+			a{
+				color: #b7c6d5;
+				&:hover{
+					color: #8398ad;
+				}
+				i{
+					font-size: 2.1rem;
+				}
+			}
+		}
+	}
+}

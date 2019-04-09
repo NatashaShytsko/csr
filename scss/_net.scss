@@ -1,0 +1,46 @@
+.net{
+	background: url($img_dir+ 'net_bg.png') no-repeat right bottom;
+	background-size: auto 100%;
+	margin-top: -8rem;
+	position: relative;
+	z-index: 2;
+	padding: 24rem 1rem;
+	&:before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+		top: 0;
+		left: 0;		
+		background: transparent;
+	background: -moz-linear-gradient(273deg, transparent 0%, transparent 93%, #f7f7f3 93.1%, #f7f7f3 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(273deg, transparent 0%,transparent 93%,#f7f7f3 93.1%,#f7f7f3 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(177deg, transparent 0%,transparent 93%,#f7f7f3 93.1%,#f7f7f3 100%);
+	
+	}
+		@include br1{
+		background-size: 650px auto;
+		background-position: right bottom;
+		padding: 0 0 10rem;
+	}
+		@include br2{
+		padding: 0 0 300px;
+		background-size: 450px auto;
+	}
+		&__block{
+		width: 63%;
+		@include br1{
+			width: 78%;
+		}
+		@include br2{
+			width: 100%;
+		}
+		@include br3{
+			text-align: center;
+		}
+		p{
+			margin: 3rem 0;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.bottom{
+	background: url($img_dir + 'bottom_bg.jpg') no-repeat center;
+	background-size: cover;
+	padding: 18rem 0 14rem;
+	.button{
+		margin-top: 3rem;
+		&:hover{
+			background: #fff;
+			border-color: #fff;
+		}
+	}
+}

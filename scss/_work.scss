@@ -1,0 +1,51 @@
+.work{
+	background: #f7f7f3;
+	background: -moz-linear-gradient(-93deg, #f7f7f3 0%, #f7f7f3 90%, transparent 90.1%, transparent 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-93deg, #f7f7f3 0%,#f7f7f3 90%,transparent 90.1%,transparent 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(-177deg, #f7f7f3 0%,#f7f7f3 90%,transparent 90.1%,transparent 100%);
+	padding: 8rem 3rem 13rem;
+	position: relative;
+	z-index: 3;
+	@include br3{
+		padding: 5rem 2rem 13rem;
+	}
+	@media screen and (max-width: 390px){
+		padding: 5rem 1rem 13rem;
+	}
+	.container{
+		max-width: 1200px;
+		@include br2{
+			width: 95%;
+		}
+	}
+	&__img{
+		width: 48rem;
+		margin: 0 auto;
+		iframe{
+			width: 100%;
+			min-height: 78rem;
+			@include br3{
+				min-height: 69rem;
+			}
+			@media screen and (max-width: 460px){
+				min-height: 55rem;
+			}
+		}
+	}
+	&__text{
+		width: calc(100% - 56rem);
+		padding-right: 2rem;
+		@include br1{
+			width: 100%;
+			padding-right: 0;
+			margin-top: 3rem;
+			padding-bottom: 3rem;
+		}
+		@include br3{
+			text-align: center;
+		}
+		p{
+			margin: 3rem 0;
+		}
+	}
+}

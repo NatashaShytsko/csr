@@ -1,0 +1,33 @@
+
+.gallery{
+	background-color: #f7f7f3;
+	padding: 10rem 0 8rem;
+	&__items{
+		margin: 5.5rem 0 2rem;
+	}
+	&__item{
+		margin-bottom: 2rem;
+		width: calc(100%/2 - 1rem);
+		box-shadow: 0 0 0.4rem rgba(24, 24, 24, 0.26);
+		border: 1rem solid #fff;
+		background-color: #f7f7f3;
+		overflow: hidden;
+		height: 0;
+		padding-top: 21.75%;
+		position: relative;
+		@include br1{
+			padding-top: 21%;
+		}
+		@include br2{
+			width: 100%;
+			padding-top: 44%;
+		}
+		img{
+			height: auto;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+}

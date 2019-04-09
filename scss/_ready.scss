@@ -1,0 +1,71 @@
+.ready{
+	background: url($img_dir+ 'ready_bg.png') no-repeat left bottom #f7f7f3;
+	position: relative;
+	padding: 10rem 1rem 36rem;
+	background-size: auto 120%;
+	@media (max-width: 1200px){
+		background-size: auto 110%;
+	}
+	@include br1{
+		background-size: 700px auto;
+		padding-top: 7rem;
+	}
+		@include br2{
+		background-size: 500px auto;
+		padding-top: 5rem;
+	}
+	@include br3{
+padding-top: 0;
+	}
+	&__block{
+		width: 55%;
+		max-width: 500px;
+		margin-left: auto;
+		@include br1{
+			width: 65%;
+			max-width: 100%;
+		}
+		@include br2{
+			width: 100%;
+		}
+		@include br3{
+			text-align: center;
+		}
+		p{
+			margin: 2rem 0;
+		}
+	}
+	&__quote{
+		box-shadow: 0 0 0.5rem rgba(24, 24, 24, 0.19);
+		@include border-radius(1.5rem);
+		background-color: rgba(255,255,255,.8);
+		padding: 1.5rem 2rem;
+		margin-top: 4.5rem;
+		div{
+			font: 1.5rem/1.8 $HI;
+			padding: 3rem 7rem;
+			position: relative;
+			@include br3{
+				padding: 5rem 3rem;
+			}
+			&:before, &:after{
+				content: '';
+				position: absolute;
+				width: 4.6rem;
+				height: 3.3rem;
+			}
+			&:before{
+				background: url($img_dir + 'quote_top.svg') no-repeat center;
+				background-size: 4.6rem 3.3rem;
+				top: 0;
+				left: 0;
+			}
+			&:after{
+				background: url($img_dir + 'quote_bottom.svg') no-repeat center;
+				background-size: 4.6rem 3.3rem;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}

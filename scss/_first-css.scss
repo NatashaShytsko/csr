@@ -1,0 +1,131 @@
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google:before {content: "\e900";}
+.icon-twitter:before {content: "\e90a";}
+.icon-facebook:before {content: "\e901";}
+.icon-linkedin:before {content: "\e905";}
+.icon-play:before {content: "\e904";}
+.icon-right1:before {content: "\e906";}
+.icon-down:before {content: "\e909";}
+
+html{
+	font-size: $font-size-def;
+	@include br3{
+		font-size: $font-size-def*0.9;
+	}
+}
+
+body{
+	font-family: $HR, "Arial", sans-serif;
+	color: $main-color1;
+	overflow-x: hidden;	
+	min-width: 320px;
+}
+
+a{
+	text-decoration: none;
+	color:  #000000;
+}
+
+.d_flex {
+	@include flex;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include flex-wrap;
+}
+
+%center-flex{
+	@include flex;
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+.text-center{
+	text-align: center;
+}
+
+.mx-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul li{
+	display: inline-block;
+}
+
+input, textarea{
+	-webkit-appearance: none;
+}
+
+textarea{
+	overflow: auto;
+}
+
+@include placeholder{color: #8b8b8b;}
+
+img{
+	max-width: 100%;
+}
+
+.container{
+	max-width: 960px;
+	
+	@include br1{
+		width: 90%;
+	}
+}
+
+.big{
+	text-transform: uppercase;
+}
+
+.text{
+	font: 1.7rem/1.76 $HR;
+	span{
+		font-family: $HB;
+	}
+}
+
+.headline{
+	font: 4.5rem $AL;
+}
+
+.white{
+	color: $main-color2;
+}
+
+.black{
+	color: $main-color3;
+}
+ul{
+	&.list{
+		text-align: left;
+		li{
+			font: 1.5rem/1.8 $HI;
+			position: relative;
+			padding-left: 3rem;
+			margin: .3rem 0;
+			&:before{
+				background: #47c0ff;
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				@include border-radius;
+				left: 7px;
+				top: 10px;
+
+			}
+		}
+	}
+}

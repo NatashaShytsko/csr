@@ -1,0 +1,228 @@
+%menu-a{
+	color: $menu-color;
+	font: 1.2rem $HB;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
+}
+%submenu-ul{
+	position: absolute;
+	background: #fff;
+	@include border-radius(0.5rem);
+	padding: 2rem .5rem 2rem 2rem;
+	border: 1px solid #b7c6d5;
+}
+.header{
+	padding: 2rem 3rem;
+	@include br3{
+		padding: 2rem 1rem;
+	}
+	nav{
+		.submenu, .submenu-mobile, .sub-submenu, .sub-submenu-mobile{
+			display: none;
+		}
+		#pull{
+			display: none;
+			cursor: pointer;
+			@include br1{
+				display: inline-block;
+				position: absolute;
+				right: 3rem;
+				top: 7rem ;
+			}
+			@include br3{
+				right: 2rem;
+			}
+		}
+		.icon-bar {
+			display: block;
+			width: 28px;
+			height: 2px;
+			border-radius: 1px;
+			background-color: #000;
+			margin: 5px auto;
+		}
+		.navbar-toggle{
+			.icon-bar:nth-of-type(2){
+				top: 1px;
+			}
+			.icon-bar:nth-of-type(3) {
+				top: 2px;
+			}
+			.icon-bar {
+				position: relative;
+				@include transition(all 200ms ease-in-out);
+			}
+			&.cross{ 
+				.icon-bar:nth-of-type(1) {
+					top: 6px;
+					@include transform(rotate(45deg));
+				}
+				.icon-bar:nth-of-type(2) {
+					background-color: transparent;
+				}
+				.icon-bar:nth-of-type(3) {
+					top: -8px;
+					@include transform(rotate(-45deg));
+				}
+			}
+		}
+		.menu{
+			@include br1{
+				display: none;
+			}
+			&>li{
+				&>a{
+					@extend %menu-a;
+					padding: 0 1.4rem;
+					border: 1px solid transparent;
+					@include border-radius(0.5rem);
+					@extend %center-flex;
+					height: 37px;
+					&.hover{
+						border-bottom-color:#fff !important;
+						border-bottom-left-radius:0;
+						border-bottom-right-radius:0;
+						background:#fff;
+					}
+					@media (max-width: 1060px){
+						padding: 0 .9rem;
+					}
+				}	
+				&:hover{
+					&>a{
+						border-color: #b7c6d5;
+					}
+				}	
+				&:last-child{
+					a{
+						background: $btn-color;
+						border-color: $btn-color;
+						color: $main-color2;
+						font-size: 1.4rem;
+						&:hover{
+							background: transparent;
+							color: $btn-color;
+						}
+					}
+				}
+				.submenu{
+					@extend %submenu-ul;
+					.sub-submenu{
+						@extend %submenu-ul;
+						li{
+							ul{
+								margin-left: 1rem;
+							}
+						}
+					}
+				}
+				&:hover{
+					@media (min-width: 992px){
+						.submenu{
+							display: block;
+							border-top-left-radius: 0;
+							margin-top: -1px;
+							z-index: 1;
+							li{
+								display: block;
+								position: relative;
+								&:before{
+									content: '\e906';
+									position: absolute;
+									font: 2.2rem 'icomoon';
+									color: #cd0027;
+									left: -1.5rem;
+									top: .4rem;
+								}
+								&:hover{
+									.sub-submenu{
+										display: block;
+										left: 100%;
+										min-width: 200px;
+										top: 0;
+									}
+								}
+								a{
+									@include flex;
+									@include justify-content(flex-start);
+									@include align-items(center);
+									color: $menu-color;
+									font: 1.1rem $HB;
+									text-transform: uppercase;
+									padding: 1rem;
+									&:hover{
+										text-decoration: underline;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.menu-mobile{
+			display: none;
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			right: 0;
+			top: 136px;
+			background: #fff;
+			border-bottom: 1px solid #b7c6d5;
+			-webkit-user-select: none;
+			-webkit-touch-callout: none; 
+			z-index: 100;
+			@include br3{
+				top: 127px;
+			}
+			.open{
+				display: inline-block;
+				float: right;
+				font-size: 2.2rem;
+				color: #cd0027;
+				margin-top: 5px;
+				padding-right: 1rem;
+				cursor: pointer;
+			}
+			a{
+				@extend %menu-a;
+				padding: 1rem 1.4rem;
+				height: 35px;
+				display: inline-block;
+				&:hover{
+					text-decoration: underline;
+				}
+				@include br3{
+					height: 30px;
+				}
+			}
+			li{
+				display: block;
+				text-align: left;
+				border-top: 1px solid #b7c6d5;
+				ul{
+					li{
+						a{
+							margin-left: 2rem;
+						}
+						ul{
+							li{
+								a{
+									margin-left: 4rem;
+								}
+								ul{
+									li{
+										a{
+											margin-left: 6rem;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

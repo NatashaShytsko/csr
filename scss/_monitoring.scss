@@ -1,0 +1,39 @@
+.monitoring{
+	background: url($img_dir + 'monitoring_bg.jpg') no-repeat 90% top;
+	padding: 0 2rem 11rem;
+	@media (max-width: 1600px){
+		background-position: 110% top;
+	}
+	@media (max-width: 1200px){
+		background-position: 180% top;
+	}
+	@include br1{
+		background-position: center top;
+		padding: 350px 0 5rem;
+		background-size: 450px auto;
+	}
+	@include br3{
+		background-size: 300px auto;
+		padding: 300px 0 5rem;
+	}
+	&__block{
+		width: 35%;
+		padding: 17rem 0 20rem;
+		@include br1{
+			width: 100%;
+			padding: 5rem 0 0;
+			text-align: center;
+		}
+		@include br3{
+			padding: 0;
+		}
+	}
+	&__text{
+		margin: 3rem 0;
+	}
+	.button{
+		@include br1{
+			margin: 0 auto;
+		}
+	}
+}

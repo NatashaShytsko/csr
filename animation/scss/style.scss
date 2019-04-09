@@ -1,0 +1,314 @@
+@font-face {font-family: "HelveticaNeueCyr-Roman";
+    font-display: swap;
+    src: url("../fonts/HelveticaNeueCyr-Roman.eot");
+    src: url("../fonts/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+	font-size: 10px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrapper{
+	background: #f7f7f3;
+	width: 42rem;
+	height: auto;
+	margin: auto;
+	font: 1.5rem"HelveticaNeueCyr-Roman";
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 2.5rem;
+.container{
+	position: relative;
+	width: 37.5rem;
+    height: 71.4rem;
+	border-radius: 10rem;
+	margin: auto;
+	text-align: center;
+	background: -webkit-linear-gradient(135deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	background: -o-linear-gradient(135deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	background: linear-gradient(-45deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	-webkit-animation: bg 6s ease-out infinite;
+	        animation: bg 6s ease-out infinite;
+.sun{
+	position:absolute;
+	top: -2rem;
+	left: -4.5rem;
+	background: url(../img/sun.png) no-repeat;
+	background-size: cover;
+	width: 13.7rem;
+	height: 14rem;
+	-webkit-animation-fill-mode: 
+		forwards;animation-fill-mode: forwards;
+	-webkit-animation: sun-close 6s ease-out infinite;
+	        animation: sun-close 6s ease-out infinite;
+}
+.moon{
+	position:absolute;
+	top: 5.8rem;
+    right: 12.4rem;
+	opacity: 0;
+	background: url(../img/moon.png) no-repeat;
+	background-size: cover;
+	width: 11.5rem;
+	height: 10.7rem;
+	-webkit-animation-fill-mode: 
+		forwards;animation-fill-mode: forwards;
+	 -webkit-animation: moon-close 6s ease-out infinite;
+	         animation: moon-close 6s ease-out infinite;
+}
+
+.house{
+	position: relative;
+	z-index: 3;
+	max-width: 11.1rem;
+	max-height: 11.1rem;
+	width: 100%;
+	height: auto;
+	margin: auto;
+img{
+	width: 100%;
+	height: auto;
+}
+}
+}
+}
+@-webkit-keyframes sun-close{
+10%, 20%, 30%, 40%{
+	-webkit-transform: translate(0, 0) scale(1, 1);
+	        transform: translate(0, 0) scale(1, 1);
+	opacity: 1;
+}
+0%, 50%,100%{
+	-webkit-transform: translate(100%,50%) scale(0.4, 0.4);
+	        transform: translate(100%,50%) scale(0.4, 0.4);
+	opacity: 0;
+}
+}
+@keyframes sun-close{
+10%, 20%, 30%, 40%{
+	-webkit-transform: translate(0, 0) scale(1, 1);
+	        transform: translate(0, 0) scale(1, 1);
+	opacity: 1;
+}
+0%, 50%,100%{
+	-webkit-transform: translate(100%,50%) scale(0.4, 0.4);
+	        transform: translate(100%, 50%) scale(0.4, 0.4);
+	opacity: 0;
+}
+}
+@-webkit-keyframes bg{
+10%, 20%, 30%, 40%{
+	background: -webkit-linear-gradient(135deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	background: -o-linear-gradient(135deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	background: linear-gradient(-45deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+}
+0%, 50%,100%{
+	background: -webkit-linear-gradient(60deg, #132f3c 20%, #4a5f69 50%, #99a5aa 100%);
+	background: -o-linear-gradient(60deg, #132f3c 20%, #4a5f69 50%, #99a5aa 100%);
+	background: linear-gradient(30deg, #132f3c 20%, #4a5f69 50%, #99a5aa 100%);
+}
+}
+@keyframes bg{
+10%, 20%, 30%, 40%{
+	background: -webkit-linear-gradient(135deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	background: -o-linear-gradient(135deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	background: linear-gradient(-45deg, #60cdff 10%, #64ceff 15%, #6ed1ff 25%, #92ddff 50%, #abe5ff 60%, #c8eeff 70%, #ddf4ff 80%, #ecf9ff 85%, #f4fcff 90%);
+	
+}
+0%, 50%,100%{
+	background: -webkit-linear-gradient(60deg, #132f3c 20%, #4a5f69 50%, #99a5aa 100%);
+	background: -o-linear-gradient(60deg, #132f3c 20%, #4a5f69 50%, #99a5aa 100%);
+	background: linear-gradient(30deg, #132f3c 20%, #4a5f69 50%, #99a5aa 100%);
+	
+}
+}
+@-webkit-keyframes moon-close{
+0%, 50%, 100%{
+	-webkit-transform: translate(0, 0) scale(0.5, 0.5);
+	        transform: translate(0, 0) scale(0.5, 0.5);
+	opacity: 0;
+}
+60%, 70%, 80%, 90%{
+	 -webkit-transform: translate(150%, -50%) scale(1, 1);
+	         transform: translate(150%, -50%) scale(1, 1);
+	 opacity: 1;
+}
+}
+@keyframes moon-close{
+0%, 50%, 100%{
+	-webkit-transform: translate(0, 0) scale(0.5, 0.5);
+	        transform: translate(0, 0) scale(0.5, 0.5);
+	opacity: 0;
+}
+60%, 70%, 80%, 90%{
+	 -webkit-transform: translate(150%, -50%) scale(1, 1);
+	         transform: translate(150%, -50%) scale(1, 1);
+	 opacity: 1;
+}
+}
+.arrow{
+	width: 1.5rem;
+	height: 5.1rem;
+	margin: auto;
+	padding-top: 1rem;
+	overflow-y: hidden;
+	-webkit-animation: arrow-direction 6s ease-in infinite;
+	        animation: arrow-direction 6s ease-in infinite;
+.icon-arrow{
+	background: url(../img/icon-arrow.svg) no-repeat;
+	background-size: cover;
+	width: 1.5rem;
+	height: 2.2rem;
+	margin-bottom: 0.3rem;
+	-webkit-animation: arrow 0.5s linear infinite;
+	        animation: arrow 0.5s linear infinite;
+}
+}
+@-webkit-keyframes arrow-direction{
+11%, 20%, 30%, 40%, 50%{
+	-webkit-transform: rotate(0);
+	        transform: rotate(0);
+}
+0%, 10%, 51%,100%{
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+}
+}
+@keyframes arrow-direction{
+11%, 20%, 30%, 40%, 50%{
+	-webkit-transform: rotate(0);
+	        transform: rotate(0);
+}
+0%, 10%, 51%,100%{
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+}
+}
+@-webkit-keyframes arrow{
+0%{
+	-webkit-transform: translate(0, 0);
+	        transform: translate(0, 0);
+}
+100%{
+	-webkit-transform: translate(0, 200%);
+	        transform: translate(0, 200%);
+}
+}
+@keyframes arrow{
+0%{
+	-webkit-transform: translate(0, 0);
+	        transform: translate(0, 0);
+}
+100%{
+	-webkit-transform: translate(0, 200%);
+	        transform: translate(0, 200%);
+}
+}
+.device-block{
+	position: relative;
+	z-index: 9;
+	max-width: 15.2rem;
+	width: 100%;
+	height: 15.2rem;
+	margin: auto;
+	border-radius: 50%;
+	border: 0.8rem solid #fff;
+	overflow: hidden;
+.bg-device{
+	position: absolute;
+	background: url(../img/device.png) no-repeat center;
+	background-size: cover;
+	width: 15.2rem;
+	height: 15.2rem;
+	-webkit-animation: device-rotate 6s linear infinite alternate;
+	        animation: device-rotate 6s linear infinite alternate;
+}
+.dashboard{
+	position: relative;
+	background: url(../img/dashboard.png) no-repeat bottom center;
+	background-size: cover;
+	width: 15.2rem;
+	height: 7.8rem;
+}
+p{
+	position: relative;
+	top: -2.3rem;
+	color: #fff;
+}
+}
+@-webkit-keyframes device-rotate{
+0%{
+	-webkit-transform: rotate(0);
+	        transform: rotate(0);
+}
+50%{
+	-webkit-transform: rotate(720deg);
+	        transform: rotate(720deg);
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+}
+}
+@keyframes device-rotate{
+0%{
+	-webkit-transform: rotate(0);
+	        transform: rotate(0);
+}
+50%{
+	-webkit-transform: rotate(720deg);
+	        transform: rotate(720deg);
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+}
+}
+.electricrod{
+	position: relative;
+	top: -3.5rem;
+	background: url(../img/electricrod.png) no-repeat;
+	background-size: cover;
+	width: 15.9rem;
+	height: 20.8rem;
+	margin: auto;
+}
+.home{
+	position: relative;
+	padding: 2.5rem 0 2.5rem 0;
+}
+.meter{
+	padding: 1.5rem 0 1rem 0;
+}
+
+.home,
+.meter,
+.grid{
+	-webkit-animation: color-text 6s ease-in infinite;
+	        animation: color-text 6s ease-in infinite;
+}
+@keyframes color-text{
+11%, 40%, 50%{
+	color: #000;
+}
+0%, 10%, 51%, 60%,100%{
+	color:  #fff;
+}
+}
+
+@media screen and (max-width: 460px){
+	:root{
+		font-size: 8px;
+	}
+}
+@media screen and (max-width: 390px){
+	:root{
+		font-size: 6px;
+	}
+}

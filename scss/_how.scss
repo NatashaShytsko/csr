@@ -1,0 +1,36 @@
+.how{
+	background: url($img_dir+ 'how_bg.png') no-repeat right bottom;
+	padding: 11rem 0 13rem;
+	@media (max-width: 1620px){
+		background-position: 200px bottom;
+	}
+	@media (max-width: 1440px){
+		background-position: left bottom;
+	}
+	@media (max-width: 1240px){
+		background-position: left bottom;
+	}
+	@include br1{
+		background-size: 650px auto;
+		background-position: right bottom;
+	}
+	@include br2{
+		padding: 5rem 0 250px;
+		background-size: 500px auto;
+	}
+	&__block{
+		width: 55%;
+		@include br1{
+			width: 65%;
+		}
+		@include br2{
+			width: 100%;
+		}
+		@include br3{
+			text-align: center;
+		}
+		p{
+			margin-top: 4rem;
+		}
+	}
+}

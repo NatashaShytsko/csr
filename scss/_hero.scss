@@ -1,0 +1,101 @@
+.hero{
+	padding: 50rem 0 10rem;
+	background: url($img_dir+'hero_bg.jpg') no-repeat center transparent;
+	background-size: cover;
+	position: relative;
+	@include br1{
+		padding: 30rem 0 7rem;
+	}
+	@include br2{
+		padding: 20rem 0 5rem;
+	}
+	@include br3{
+		padding: 7rem 0 4rem;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		background: transparent;
+		background: -moz-linear-gradient(-88deg, transparent 0%, transparent 81%, #ffffff 81.1%, #ffffff 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-88deg, transparent 0%,transparent 81%,#ffffff 81.1%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(178deg, transparent 0%,transparent 81%,#ffffff 81.1%,#ffffff 100%);
+	}
+	form{
+		background-color: rgba(6,49,91,.8);
+		padding: 4.5rem 3rem;
+		position: relative;
+		z-index: 2;
+		@include br3{
+			padding: 4rem 2rem;
+		}
+	}
+	&__text{
+		color: #a8a8a8;
+		font-size: 1.4rem;
+		line-height: 1.71;
+		margin: 2.5rem 0;
+	}
+	.group{
+		@extend .d_flex;
+		margin-bottom: 1.5rem;
+		input[type="submit"]{
+			&:hover{
+				background: #fff;
+				border-color: #fff;
+			}
+		}
+		span{
+			width: 65%;
+			@include br3{
+				width: 100%;
+				input{
+					margin: 0 auto;
+				}
+			}
+		}
+		label{
+			width: 35%;
+			@extend .text;
+			color: $main-color2;
+			padding-right: .5rem;
+			@include br3{
+				width: 100%;
+				margin-bottom: .5rem;
+			}
+		}
+		&:nth-child(n+3):nth-child(-n+5){
+			span{	
+				position: relative;	
+				@include border-radius(0.5rem);	
+				overflow: hidden;				
+				&:before{
+					content: '';
+					position: absolute;
+					width: 3.8rem;
+					height: 100%;
+					top: 0;
+					left: 0;
+				}
+				input{
+					width: 100%;
+					@extend .text;
+					color: $main-color3;
+					padding: .4rem .5rem .4rem 5rem;
+					box-shadow: inset 0 0 0.4rem rgba(24, 24, 24, 0.32);		
+					min-height: 3.7rem;
+				}
+			}
+		}
+	}
+}
+$buttonConfig: 'location' 3, 'home' 4, 'doll' 5; 
+@each $tuple in $buttonConfig {
+	$tr: nth($tuple, 2);
+	.group:nth-child(#{$tr}) span:before{
+		background: url($img_dir+nth($tuple, 1)+'.svg') no-repeat center #e8e8e8;
+	}
+}

@@ -1,0 +1,30 @@
+.top{
+	color: #a4a4a4;
+	background: #072847;
+	font-size: 1.2rem;
+	padding: 1rem 3rem;
+	@include br3{
+		padding: 1rem 1.5rem;
+	}
+	@media (max-width: 345px){
+		font-size: 1.1rem;
+	}
+	&__block{
+		text-align: right;
+	}
+	&__phone{
+		color: #fff;
+		font-family: $HB;
+		margin-right: 1rem;
+		@include br3{
+			margin-right: .5rem;
+		}
+	}
+	&__mail{
+		color: #fc0;
+		margin-left: 1rem;
+		@include br3{
+			margin-left: .5rem;
+		}
+	}
+}

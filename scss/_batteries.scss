@@ -1,0 +1,42 @@
+.batteries{
+	background: url($img_dir + 'batteries_bg.jpg') no-repeat 95% top;
+	padding: 0 2rem 0;
+	@media (max-width: 1600px){
+		background-position: 120% top;
+	}
+	@media (max-width: 1400px){
+		background-position: 160% top;
+	}
+	@media (max-width: 1200px){
+		background-position: 400px top;
+	}
+	@include br1{
+		background-position: center bottom;
+		padding: 5rem 0 350px;
+		background-size: 450px auto;
+	}
+	@include br3{
+		background-size: 300px auto;
+		padding: 5rem 0 300px;
+	}
+	&__block{
+		width: 35%;
+		padding: 17rem 0 19rem;
+		@include br1{
+			width: 100%;
+			padding: 0 0 5rem;
+			text-align: center;
+		}
+		@include br3{
+			padding: 0;
+		}
+	}
+	&__text{
+		margin: 3rem 0;
+	}
+	.button{
+		@include br1{
+			margin: 0 auto;
+		}
+	}
+}

@@ -1,0 +1,117 @@
+@mixin typography($font-name, $font-longname, $font-directory: "../fonts/") {
+	@font-face {
+		font-family: $font-name;
+		font-display: swap;
+		src: url($font-directory + $font-longname + ".eot") format('embedded-opentype');
+		src:  url($font-directory + $font-longname + ".woff") format('woff'),
+		url($font-directory + $font-longname + ".woff2") format('woff2'), 
+		url($font-directory + $font-longname + ".ttf") format('truetype'),
+		url($font-directory + $font-longname + ".otf") format('opentype'), 
+		url($font-directory + $font-longname + ".svg#webfont") format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+@mixin flex{
+	display: -webkit-box;  
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin grid{ 
+	display: -ms-grid;
+	display: grid;
+}
+
+@mixin grid-rows($rows,  $rowsms){ 
+	-ms-grid-rows: $rowsms;
+	grid-template-rows: $rows;
+}
+
+@mixin grid-cols($cols,  $colsms){ 
+	-ms-grid-columns: $colsms;
+	grid-template-columns: $cols;
+}
+
+@mixin justify-content($jc){
+	-webkit-box-pack: $jc;
+	-ms-flex-pack: justify;
+	justify-content: $jc;
+}
+
+@mixin align-items($ai){
+	-webkit-box-align: $ai;
+	-ms-flex-align: $ai;
+	align-items: $ai;
+}
+
+@mixin flex-wrap($wrap: wrap){
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+@mixin border-radius($radius: 50%) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($left, $top, $radius, $blur, $color) {
+	-webkit-box-shadow: $left $top $radius $blur $color;
+	-moz-box-shadow: $left $top $radius $blur $color;
+	box-shadow: $left $top $radius $blur $color;
+}
+
+@mixin transform($param) {
+	-webkit-transform: $param;
+	-ms-transform: $param;
+	transform: $param;
+}
+
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin vertical-center {
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+	left: 50%;
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}  
+}
+
+@mixin br1() {
+	@media (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin br2() {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin br3() {
+	@media (max-width: 576px) {
+		@content;
+	}
+}
